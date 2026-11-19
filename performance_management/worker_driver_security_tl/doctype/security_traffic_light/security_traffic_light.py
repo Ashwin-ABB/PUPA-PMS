@@ -1,0 +1,5 @@
+from performance_management.worker_driver_security_tl.traffic_light import TrafficLightDocument
+
+
+class SecurityTrafficLight(TrafficLightDocument):
+	pass

@@ -1,0 +1,89 @@
+{
+ "actions": [],
+ "creation": "2026-11-04 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "sheet",
+  "help",
+  "sb_designations",
+  "designations",
+  "sb_rules",
+  "rules"
+ ],
+ "fields": [
+  {
+   "fieldname": "sheet",
+   "fieldtype": "Select",
+   "label": "Sheet",
+   "options": "\nWorker Traffic Light\nDriver Traffic Light\nSecurity Traffic Light",
+   "reqd": 1,
+   "unique": 1,
+   "set_only_once": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "help",
+   "fieldtype": "Small Text",
+   "label": "How it works",
+   "read_only": 1,
+   "default": "Designations: the employees listed on this sheet are the active employees with these designations (if the list is empty, the starting defaults are used). On the sheet itself you can narrow the list by Designation, Branch and Department; the Department column comes from the Employee master. Colour limits: a score at or above Green from is Green; at or above Yellow from is Yellow; at or above Red from is Red; lower is Grey. The Total row colours each employee's total. Submitted sheets keep the colours they had when submitted."
+  },
+  {
+   "fieldname": "sb_designations",
+   "fieldtype": "Section Break",
+   "label": "Employees on this sheet"
+  },
+  {
+   "fieldname": "designations",
+   "fieldtype": "Table",
+   "label": "Designations",
+   "options": "WDS TL Designation"
+  },
+  {
+   "fieldname": "sb_rules",
+   "fieldtype": "Section Break",
+   "label": "Colour limits"
+  },
+  {
+   "fieldname": "rules",
+   "fieldtype": "Table",
+   "label": "Rules",
+   "options": "WDS TL Rule Row",
+   "cannot_add_rows": 1,
+   "cannot_delete_rows": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-11-04 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Worker Driver Security TL",
+ "name": "WDS TL Rules",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "create": 1,
+   "read": 1,
+   "write": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1
+  },
+  {
+   "role": "HR Manager",
+   "create": 1,
+   "read": 1,
+   "write": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "autoname": "field:sheet",
+ "track_changes": 1
+}

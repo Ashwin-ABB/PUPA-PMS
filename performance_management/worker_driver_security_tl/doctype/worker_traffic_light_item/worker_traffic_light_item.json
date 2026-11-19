@@ -1,0 +1,115 @@
+{
+ "actions": [],
+ "creation": "2026-11-04 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "employee",
+  "employee_name",
+  "department",
+  "attendance",
+  "punctuality",
+  "behaviour_with_colleagues",
+  "work_speed",
+  "five_s_surroundings",
+  "dedication_responsibility",
+  "total",
+  "rating",
+  "ratings"
+ ],
+ "fields": [
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "label": "Emp Code",
+   "options": "Employee",
+   "reqd": 1,
+   "in_list_view": 1,
+   "columns": 2
+  },
+  {
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "label": "Emp Name",
+   "fetch_from": "employee.employee_name",
+   "read_only": 1,
+   "in_list_view": 1,
+   "columns": 3
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department",
+   "fetch_from": "employee.department",
+   "read_only": 1,
+   "in_list_view": 1,
+   "columns": 3
+  },
+  {
+   "fieldname": "attendance",
+   "fieldtype": "Float",
+   "label": "வருகை (10)"
+  },
+  {
+   "fieldname": "punctuality",
+   "fieldtype": "Float",
+   "label": "நேரம் தவறாமை (10)"
+  },
+  {
+   "fieldname": "behaviour_with_colleagues",
+   "fieldtype": "Float",
+   "label": "சக ஊழியர்களிடம் பழகும் விதம் (15)"
+  },
+  {
+   "fieldname": "work_speed",
+   "fieldtype": "Float",
+   "label": "வேலையின் வேகம் (20)"
+  },
+  {
+   "fieldname": "five_s_surroundings",
+   "fieldtype": "Float",
+   "label": "5 S & சுற்றுப்புற பராமரிப்பு (20)"
+  },
+  {
+   "fieldname": "dedication_responsibility",
+   "fieldtype": "Float",
+   "label": "வேலை அர்ப்பணிப்பு மற்றும் பொறுப்பு (25)"
+  },
+  {
+   "fieldname": "total",
+   "fieldtype": "Float",
+   "label": "Total Value (100)",
+   "read_only": 1,
+   "in_list_view": 1,
+   "columns": 2,
+   "precision": "2"
+  },
+  {
+   "fieldname": "rating",
+   "fieldtype": "Data",
+   "label": "Rating",
+   "read_only": 1
+  },
+  {
+   "fieldname": "ratings",
+   "fieldtype": "Long Text",
+   "label": "Ratings",
+   "hidden": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-11-04 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Worker Driver Security TL",
+ "name": "Worker Traffic Light Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "istable": 1,
+ "editable_grid": 1
+}

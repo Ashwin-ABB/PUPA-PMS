@@ -1,0 +1,15 @@
+[build-system]
+requires = ["flit_core >=3.4,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "performance_management"
+authors = [{ name = "Pupa", email = "admin@example.com" }]
+description = "KRA, KPI, PTS, ratings and traffic light scoring for staff performance"
+requires-python = ">=3.10"
+readme = "README.md"
+dynamic = ["version"]
+dependencies = []
+
+[tool.bench.frappe-dependencies]
+frappe = ">=15.0.0,<17.0.0"

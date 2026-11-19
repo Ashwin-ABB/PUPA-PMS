@@ -1,0 +1,110 @@
+{
+ "actions": [],
+ "creation": "2026-11-04 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "employee",
+  "employee_name",
+  "department",
+  "parking_inspection",
+  "garden_dog",
+  "incident_alert",
+  "gate_electrical",
+  "communication",
+  "total",
+  "rating",
+  "ratings"
+ ],
+ "fields": [
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "label": "Emp Code",
+   "options": "Employee",
+   "reqd": 1,
+   "in_list_view": 1,
+   "columns": 2
+  },
+  {
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "label": "Emp Name",
+   "fetch_from": "employee.employee_name",
+   "read_only": 1,
+   "in_list_view": 1,
+   "columns": 3
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department",
+   "fetch_from": "employee.department",
+   "read_only": 1,
+   "in_list_view": 1,
+   "columns": 3
+  },
+  {
+   "fieldname": "parking_inspection",
+   "fieldtype": "Float",
+   "label": "Team Rating (15)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "garden_dog",
+   "fieldtype": "Float",
+   "label": "Garden & Dog Maintenance (20)"
+  },
+  {
+   "fieldname": "incident_alert",
+   "fieldtype": "Float",
+   "label": "Incident - Alert System (25)"
+  },
+  {
+   "fieldname": "gate_electrical",
+   "fieldtype": "Float",
+   "label": "Gate, Shutter & Electrical Maintenance (25)"
+  },
+  {
+   "fieldname": "communication",
+   "fieldtype": "Float",
+   "label": "Communication with visitors & Staff’s (15)"
+  },
+  {
+   "fieldname": "total",
+   "fieldtype": "Float",
+   "label": "Total Value (100)",
+   "read_only": 1,
+   "in_list_view": 1,
+   "columns": 2,
+   "precision": "2"
+  },
+  {
+   "fieldname": "rating",
+   "fieldtype": "Data",
+   "label": "Rating",
+   "read_only": 1
+  },
+  {
+   "fieldname": "ratings",
+   "fieldtype": "Long Text",
+   "label": "Ratings",
+   "hidden": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-11-04 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Worker Driver Security TL",
+ "name": "Security Traffic Light Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "istable": 1,
+ "editable_grid": 1
+}
